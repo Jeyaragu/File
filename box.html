@@ -1,0 +1,64 @@
+<html>
+
+<body>
+
+<form name="submitdetails" id="naid" method="Post" onsubmit="validation();" action="Insert.php">
+
+Name: <input type="text" id="sjr" name="ragu"> <br>
+Address: <input type="text" id="location" name="add"><br>
+Email ID: <input type="email" id="email" name="mail"> <br>
+Mobile Number: <input type="number" id="identify" name="mob"> <br>
+State: <input type="text" id="placce" name="state"><br>
+Submit<input type="submit">
+</form>
+
+<!-- "Script" is userd for declare the JS -->
+
+<script>
+function validation(){
+  //var x = document.forms["submitdetails"]["sjr"].value;
+  if (document.submitdetails.sjr.value =="") 
+  {
+    alert("Name must be filled out");
+    return false;
+}
+if (document.submitdetails.location.value =="")
+{
+alert("Please enter the address");
+return false;
+}
+if (document.submitdetails.email.value=="")
+{
+alert("Please enter valid email");
+return false;
+}
+if (document.submitdetails.identify.value=="")
+{
+alert("Please enter mobile number");
+return false;
+}
+if (document.submitdetails.placce.value=="")
+{
+alert("Please enter the state");
+return false;
+}
+return true;
+}
+</script>
+
+</body>
+
+</html>
+
+
+
+$.ajax({
+	url:"",
+	method:"",
+	data:"",
+	success:function(response){
+
+	},failure:function(){
+
+	}
+});
