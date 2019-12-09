@@ -5,7 +5,7 @@ $lname=$_POST['lname'];
 $email=$_POST['email'];
 $employeeid=$_POST['emid'];
 $pwd=$_POST['pwd'];
-error_reporting(0);
+//error_reporting(0);
 
 // echo $name."<br>";
 // echo $address."<br>";
