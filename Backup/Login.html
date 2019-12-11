@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Login</title>
+	<style type="text/css">
+		.imgcontainer {
+	  text-align: center;
+	  margin: 24px 0 12px 0;
+		}
+		.container{
+			text-align: center;
+			padding: 16px;
+				
+		}
+		.anee{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<form action="Controllers/Aini.php" method="post">
+  <div class="imgcontainer">
+    <img src="img/images.png" alt="Avatar">
+  </div>
+
+  <div class="container">
+  	<div class="anee">
+    <label for="num"><b>Mobile Number</b></label>
+    <input type="text" placeholder="Enter Mobile Number" name="num" required>
+    	</div>
+    	<!-- <div class="anee">
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+      </div> -->
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+</body>
+</html>
