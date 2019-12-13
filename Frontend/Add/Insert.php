@@ -2,6 +2,7 @@
 
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
+$mobile=$_POST['mobile'];
 $email=$_POST['email'];
 $employeeid=$_POST['emid'];
 $pwd=$_POST['pwd'];
@@ -14,7 +15,7 @@ $pwd=$_POST['pwd'];
 // echo $state."<br>";
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 
 // Create connection
 $raghu =mysqli_connect($servername, $username, $password);
@@ -29,11 +30,12 @@ if ($raghu->connect_error) {
 else{
 $fname=mysqli_real_escape_string($raghu,$_REQUEST['fname']);
 $lname=mysqli_real_escape_string($raghu,$_REQUEST['lname']);
+$mobile=mysqli_real_escape_string($raghu,$_REQUEST['mobile']);
 $email=mysqli_real_escape_string($raghu,$_REQUEST['email']);
 $employeeid=mysqli_real_escape_string($raghu,$_REQUEST['emid']);
 $pwd=mysqli_real_escape_string($raghu,$_REQUEST['pwd']);
-$sql= "Insert into sample.employee_details (FNAME,LNAME,EMAIL_ID,E_ID,MOBILE_NO) values
-('$fname','$lname','$email','$employeeid','$pwd')";
+$sql= "Insert into sample.employee_details (FNAME,LNAME,EMAIL_ID,E_ID,MOBILE_NO,PASSWORD) values
+('$fname','$lname','$email','$mobile','$employeeid','$pwd')";
 
 if(mysqli_query($raghu,$sql))
 {
