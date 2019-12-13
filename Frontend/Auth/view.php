@@ -22,11 +22,12 @@ $result = mysqli_query( $raghu, $query );
 //$result=$raghu->prepare($statement);
 //var_dump($statement->rowCount());
 //$result->execute();
-if (mysqli_num_rows($result)==0){
-	echo "Mobile Number Not Exists";
-}else{
-	echo "Given Mobile Number is Valid Mobile Number";
-}
+	if (mysqli_num_rows($result)==0){
+		echo "Mobile Number Not Exists";
+	}else{
+		header('location:include/Datainsert.html');
+		//echo "Given Mobile Number is Valid Mobile Number";
+	}
 
 
 
